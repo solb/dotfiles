@@ -1,0 +1,35 @@
+[commit]
+	verbose = true
+[diff]
+	colormoved = true
+	mnemonicprefix = true
+	renames = copies
+[fetch]
+	output = compact
+	recursesubmodules = true
+[grep]
+	fallbacktonoindex = true
+[help]
+	autocorrect = 10
+[log]
+	abbrevcommit = true
+	decorate = short
+	follow = true
+[merge]
+	conflictstyle = diff3
+	tool = vimdiff
+[mergetool]
+	writetotemp = true
+[pull]
+	rebase = merges
+[push]
+	recursesubmodules = check
+[rebase]
+	autosquash = true
+	autostash = true
+	missingcommitscheck = error
+[status]
+	showstash = true
+[user]
+	email = sboucher@cmu.edu
+	name = Sol Boucher
