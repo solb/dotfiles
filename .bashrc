@@ -111,3 +111,8 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+if [ -f "$HOME/.sources.sh" ]
+then
+    . "$HOME/.sources.sh"
+fi
