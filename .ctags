@@ -1,0 +1,3 @@
+--extras=+fq
+--kinds-c=+p
+--kinds-c++=+AN
