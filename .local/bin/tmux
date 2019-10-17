@@ -1,0 +1,10 @@
+#!/bin/sh
+
+tmux="`nextname "$0"`"
+
+if [ "$#" -eq 0 ]
+then
+	"$tmux" at || "$tmux"
+else
+	"$tmux" "$@"
+fi
