@@ -1,0 +1,11 @@
+#!/bin/sh
+
+vgdb="`nextname "$0"`"
+
+if [ "$1" = "--" ]
+then
+	shift
+	exec "$vgdb" "$@"
+else
+	exec gdb -ex "tar rem | $vgdb" "$@"
+fi
