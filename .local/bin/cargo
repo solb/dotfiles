@@ -1,0 +1,13 @@
+#!/bin/sh
+
+offline="--offline"
+if [ "$1" = "--online" ]
+then
+	offline=""
+	shift
+elif echo -- "$*" | grep -- "$offline" >/dev/null
+then
+	offline=""
+fi
+
+exec "`nextname "$0"`" $offline "$@"
