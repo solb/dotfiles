@@ -1,0 +1,9 @@
+#!/bin/sh
+
+filename="`ssh server ls -d "/srv/Printer/Scans/*" 2>/dev/null \| tail -n1`"
+if [ -n "$filename" ]
+then
+	rsync -P --remove-source-files "server:$filename" .
+else
+	false
+fi
