@@ -1,0 +1,5 @@
+#!/bin/sh
+
+echo "# Summary"
+echo
+NO_COLOR= catj - | sed -e's/\["\([^"]\+\)"\]/.\1/g' -e's/\.name//' -e's/\.children//' -e's|\.\(\S\+\) = "\(.\+\)"|- [\2](\1)|' -e's|\(.\+(.\+\)\.|  \1/|' -e's/)$/.md&/'
